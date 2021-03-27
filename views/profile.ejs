@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Super Meme Page</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel=“stylesheet” href="font-awesome.min.css">
+
+</head>
+
+<body class="secondpage">
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1 id="top"><span id="bot">Profile Page</span></h1>
+      <a href="/logout" class="btn btn-default btn-sm" id="logout">Logout</a>
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div class="col-sm-6">
+        <h3>MEMES</h3>
+        <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+          <li class="message">
+            <span><img src="/image.png" /></span>
+            <span><%= messages[i].name %></span>
+            <span><%= messages[i].img %></span>
+            <span><%= messages[i].heart %></span>
+            <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+            <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+          </li>
+          <% } %>
+        </ul>
+
+        <h2>Add a Picture</h2>
+        <% if (user.local.email) { %>
+        <form method="post" enctype="multipart/form-data" action="/upload">
+          <input type="file" name="file" class="submit">
+          <input type="submit" value="Submit" class="submit">
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"></span> Local</h3>
+
+          <% if (user.local.email) { %>
+          <p>
+            <strong>id</strong>: <%= user._id %><br>
+            <strong>email</strong>: <%= user.local.email %><br>
+            <strong>password</strong>: <%= user.local.password %>
+          </p>
+
+          <a href="/unlink/local" class="btn btn-default">Unlink</a>
+          <% } else { %>
+          <a href="/connect/local" class="btn btn-default">Connect Local</a>
+          <% } %>
+
+        </div>
+      </div>
+
+      <% } %>
+
+    </div>
+
+    <script src="public/main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

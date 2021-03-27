@@ -1,0 +1,97 @@
+html{
+  background: linear-gradient(183deg, skyblue, transparent, transparent);
+  height: 1000px;
+}
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+}
+img{
+  height: 135px;
+}
+ul{
+  list-style: none;
+}
+.firstpage{
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-default, .btn, .submit{
+  background: lightskyblue;
+  color: antiquewhite;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+.firstpage, .container.main, .jumbotron, .well{
+  background: none;
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.jumbotron h1, .jumbotron, h1, #top{
+  font-family: 'Bungee Inline', cursive;
+}
+.submit:hover{
+  background: white;
+  color: black;
+}
+.submit{
+  padding: 11px;
+}
+#top, .page-header{
+  border: none;
+}
+#top{
+  overflow:hidden;
+  display:inline-block; 
+  padding:10px; 
+  font-weight:bold;
+  font-family: 'Bungee Inline', cursive;
+  color:transparent;
+  font-size:54px;
+  -webkit-text-stroke: 2px black;
+}
+#bot{
+  background: url("https://media.giphy.com/media/dAWZiSMbMvObDWP3aA/source.gif") -20px -20px repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display:block;
+}
+.secondpage{
+  background: none;
+}
+h1{
+  text-align: center;
+}
+
+button{
+  font-family: 'Bungee Inline', cursive;
+}
+
+button:hover{
+  background-color: pink;
+}
+
+.secondpage{
+  background-image: url("https://media.giphy.com/media/dAWZiSMbMvObDWP3aA/source.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+
+input[type="file"]{
+  display: inline;
+  background: transparent;
+  padding: 11px;
+  margin-right: 15px;
+}
+
+#logout{
+  display: block;
+}
+h3, h2{
+  font-family: 'Bungee Inline', cursive;
+}
