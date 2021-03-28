@@ -21,6 +21,4 @@ Had a great collaborative session with other members of the cohort. We were able
 1. run `node server.js`
 2. Navigate to `localhost:9000`
 
-## Credit
 
-Modified from Scotch.io's auth tutorial
